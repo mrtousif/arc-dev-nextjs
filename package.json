@@ -1,0 +1,28 @@
+{
+  "name": "nextjs",
+  "version": "4.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "clsx": "latest",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "ky": "^0.23.0",
+    "ky-universal": "^0.8.2",
+    "lottie-react": "^2.0.0",
+    "next": "latest",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.2",
+    "prop-types": "latest",
+    "ramda": "^0.27.1",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  }
+}
