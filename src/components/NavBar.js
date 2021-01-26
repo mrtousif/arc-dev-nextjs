@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Link from '../Link';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import Link from "../Link";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
     AppBar,
     Toolbar,
@@ -18,69 +18,69 @@ import {
     // useMediaQuery,
     useScrollTrigger,
     Hidden,
-} from '@material-ui/core';
+} from "@material-ui/core";
 
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
 // import Menu from './Menu';
 
 const useStyles = makeStyles((theme) => ({
     logo: {
         // maxWidth: 160,
-        height: '7em',
-        [theme.breakpoints.down('sm')]: {
-            height: '6em',
+        height: "7em",
+        [theme.breakpoints.down("sm")]: {
+            height: "6em",
         },
-        [theme.breakpoints.down('xs')]: {
-            height: '5em',
+        [theme.breakpoints.down("xs")]: {
+            height: "5em",
         },
     },
     logoContainer: {
         padding: 0,
-        '&:hover': {
-            backgroundColor: 'transparent',
+        "&:hover": {
+            backgroundColor: "transparent",
         },
     },
     tabContainer: {
-        marginLeft: 'auto',
+        marginLeft: "auto",
     },
     tab: {
-        textTransform: 'none',
+        textTransform: "none",
         minWidth: 10,
-        marginLeft: '10px',
+        marginLeft: "10px",
     },
     estimate: {
-        borderRadius: '50px',
-        marginLeft: '20px',
-        marginRight: '25px',
-        textTransform: 'none',
-        fontFamily: 'Pacifico',
+        borderRadius: "50px",
+        marginLeft: "20px",
+        marginRight: "25px",
+        textTransform: "none",
+        fontFamily: "Pacifico",
     },
     menu: {
         backgroundColor: theme.palette.primary.main,
-        color: 'white',
+        color: "white",
     },
     menuItem: {
-        fontSize: '0.88rem',
+        fontSize: "0.88rem",
         opacity: 0.7,
-        '&:hover': {
+        "&:hover": {
             opacity: 1,
         },
     },
     drawerIconContainer: {
-        marginLeft: 'auto',
-        '&:hover': {
-            backgroundColor: 'transparent',
+        marginLeft: "auto",
+        "&:hover": {
+            backgroundColor: "transparent",
         },
     },
     drawerIcon: {
         // fontSize: 40
-        height: '40px',
-        width: '40px',
-        color: 'white',
+        height: "40px",
+        width: "40px",
+        color: "white",
     },
     drawer: {
         backgroundColor: theme.palette.primary.main,
-        color: 'white',
+        color: "white",
     },
     drawerItem: {
         opacity: 0.7,
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerEstimate: {
         backgroundColor: theme.palette.secondary.main,
-        color: 'black',
+        color: "black",
     },
     appBar: {
         zIndex: theme.zIndex.modal + 1,
@@ -122,33 +122,33 @@ export default function NavBar(props) {
     const [openDrawer, setOpenDrawer] = useState(false);
 
     const routes = [
-        { label: 'Home', link: '/', activeIndex: 0 },
+        { label: "Home", link: "/", activeIndex: 0 },
         {
-            label: 'Services',
-            link: '/services',
+            label: "Services",
+            link: "/services",
             activeIndex: 1,
-            ariaOwns: anchorEl ? 'simple-menu' : undefined,
-            ariaHaspopup: anchorEl ? 'true' : undefined,
+            ariaOwns: anchorEl ? "simple-menu" : undefined,
+            ariaHaspopup: anchorEl ? "true" : undefined,
             onMouseOver: (event) => handleClick(event),
         },
-        { label: 'Revolution', link: '/revolution', activeIndex: 2 },
-        { label: 'About', link: '/about', activeIndex: 3 },
-        { label: 'Contact', link: '/contact', activeIndex: 4 },
+        { label: "Revolution", link: "/revolution", activeIndex: 2 },
+        { label: "About", link: "/about", activeIndex: 3 },
+        { label: "Contact", link: "/contact", activeIndex: 4 },
     ];
 
     const menuOptions = [
-        { name: 'Services', link: '/services', activeIndex: 0 },
+        { name: "Services", link: "/services", activeIndex: 0 },
         {
-            name: 'Custom Software Development',
-            link: '/customsoftware',
+            name: "Custom Software Development",
+            link: "/customsoftware",
             activeIndex: 1,
         },
         {
-            name: 'Android/iOS App Development',
-            link: '/mobileapp',
+            name: "Android/iOS App Development",
+            link: "/mobileapp",
             activeIndex: 2,
         },
-        { name: 'Website Development', link: '/website', activeIndex: 3 },
+        { name: "Website Development", link: "/website", activeIndex: 3 },
     ];
 
     // const handleChange = (event, newValue) => {
@@ -173,43 +173,43 @@ export default function NavBar(props) {
 
     useEffect(() => {
         switch (window.location.pathname) {
-            case '/':
+            case "/":
                 if (value !== 0) setValue(0);
                 break;
-            case '/services':
+            case "/services":
                 if (value !== 1) {
                     setValue(1);
                     setSelectedIndex(0);
                 }
                 break;
-            case '/customsoftware':
+            case "/customsoftware":
                 if (value !== 1) {
                     setValue(1);
                     setSelectedIndex(1);
                 }
                 break;
-            case '/mobileapp':
+            case "/mobileapp":
                 if (value !== 1) {
                     setValue(1);
                     setSelectedIndex(2);
                 }
                 break;
-            case '/website':
+            case "/website":
                 if (value !== 1) {
                     setValue(1);
                     setSelectedIndex(3);
                 }
                 break;
-            case '/revolution':
+            case "/revolution":
                 if (value !== 2) setValue(2);
                 break;
-            case '/about':
+            case "/about":
                 if (value !== 3) setValue(3);
                 break;
-            case '/contact':
+            case "/contact":
                 if (value !== 4) setValue(4);
                 break;
-            case '/estimate':
+            case "/estimate":
                 if (value !== 5) setValue(5);
                 break;
 
@@ -384,7 +384,3 @@ export default function NavBar(props) {
         </nav>
     );
 }
-
-ElevationScroll.propTypes = {
-    children: PropTypes.element.isRequired,
-};
