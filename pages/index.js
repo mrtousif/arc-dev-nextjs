@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from '../src/Link';
+import React from "react";
+import Link from "../src/Link";
 import {
     Grid,
     Typography,
@@ -7,29 +7,29 @@ import {
     Card,
     CardContent,
     useMediaQuery,
-} from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import Lottie from 'lottie-react';
-import CallToAction from '../src/components/CallToAction';
-import landingAnimation from '../public/animations/landinganimation/data.json';
+} from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import Lottie from "lottie-react";
+import CallToAction from "../src/components/CallToAction";
+import landingAnimation from "../public/animations/landinganimation/data.json";
 
 const useStyles = makeStyles((theme) => ({
     animation: {
-        maxWidth: '50em',
-        minWidth: '19em',
+        maxWidth: "50em",
+        minWidth: "19em",
         // marginTop: '2em',
-        marginLeft: '10%',
-        [theme.breakpoints.down('sm')]: {
-            maxWidth: '25em',
+        marginLeft: "10%",
+        [theme.breakpoints.down("sm")]: {
+            maxWidth: "25em",
         },
-        [theme.breakpoints.down('xs')]: {
-            maxWidth: '20em',
+        [theme.breakpoints.down("xs")]: {
+            maxWidth: "20em",
         },
     },
     button: {
-        textTransform: 'none',
-        borderRadius: '50px',
+        textTransform: "none",
+        borderRadius: "50px",
         marginRight: 10,
         marginBottom: 10,
     },
@@ -39,65 +39,65 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 10,
     },
     mainContainer: {
-        marginTop: '5em',
-        [theme.breakpoints.down('md')]: {
-            marginTop: '3em',
+        marginTop: "5em",
+        [theme.breakpoints.down("md")]: {
+            marginTop: "3em",
         },
-        [theme.breakpoints.down('xs')]: {
-            marginTop: '2em',
+        [theme.breakpoints.down("xs")]: {
+            marginTop: "2em",
         },
     },
     heroTextContainer: {
         // minWidth: '21.5em',
-        marginLeft: '1em',
-        [theme.breakpoints.down('xs')]: {
-            margin: 'auto',
+        marginLeft: "1em",
+        [theme.breakpoints.down("xs")]: {
+            margin: "auto",
         },
     },
     icon: {
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: '2em',
+        [theme.breakpoints.up("sm")]: {
+            marginLeft: "2em",
         },
     },
     serviceContainer: {
-        marginTop: '12em',
-        [theme.breakpoints.down('sm')]: {
+        marginTop: "12em",
+        [theme.breakpoints.down("sm")]: {
             padding: 16,
         },
     },
     specialText: {
-        fontFamily: 'Pacifico',
+        fontFamily: "Pacifico",
         color: theme.palette.secondary.main,
     },
     revolutionBackground: {
         backgroundImage: `url('/assets/repeatingBackground.svg')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        height: '100%',
-        width: '100%',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+        width: "100%",
     },
     revolutionCard: {
-        position: 'absolute',
+        position: "absolute",
         boxShadow: theme.shadows[10],
-        padding: '10em',
+        padding: "10em",
         borderRadius: 15,
-        [theme.breakpoints.down('sm')]: {
-            paddingTop: '8em',
-            paddingBottom: '8em',
+        [theme.breakpoints.down("sm")]: {
+            paddingTop: "8em",
+            paddingBottom: "8em",
             paddingLeft: 0,
             paddingRight: 0,
             borderRadius: 0,
-            width: '100%',
+            width: "100%",
         },
     },
     infoBackground: {
         backgroundImage: `url('/assets/infoBackground.svg')`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        height: '100%',
-        width: '100%',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "100%",
+        width: "100%",
     },
 }));
 
@@ -105,8 +105,8 @@ export default function LandingPage(props) {
     const { setValue, setSelectedIndex } = props;
     const classes = useStyles();
     const theme = useTheme();
-    const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
-    const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
+    const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+    const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
     // const defaultOptions = {
     //     loop: true,
@@ -124,13 +124,12 @@ export default function LandingPage(props) {
                 <Grid container justify="flex-end" alignItems="center">
                     <Grid item sm className={classes.heroTextContainer}>
                         <Typography
-                            variant={matchesSM ? 'h5' : 'h4'}
+                            variant={matchesSM ? "h5" : "h4"}
                             align="center"
                             color="primary"
                             gutterBottom
                         >
-                            Bringing west coast technology <br />
-                            to the midwest
+                            Building great software
                         </Typography>
 
                         <Grid container justify="center">
@@ -171,14 +170,14 @@ export default function LandingPage(props) {
                 {/*------Custom Software Block--------*/}
                 <Grid
                     container
-                    justify={matchesSM ? 'center' : undefined}
+                    justify={matchesSM ? "center" : undefined}
                     className={classes.serviceContainer}
                 >
                     <Grid
                         item
                         style={{
-                            marginLeft: matchesSM ? 0 : '5em',
-                            textAlign: matchesSM ? 'center' : undefined,
+                            marginLeft: matchesSM ? 0 : "5em",
+                            textAlign: matchesSM ? "center" : undefined,
                         }}
                     >
                         <Typography
@@ -193,10 +192,7 @@ export default function LandingPage(props) {
                         </Typography>
                         <Typography variant="subtitle1" gutterBottom>
                             Complete digital solution from investigation to
-                            <span className={classes.specialText}>
-                                {' '}
-                                celebration
-                            </span>
+                            <span className={classes.specialText}> celebration</span>
                         </Typography>
                         <Button
                             variant="outlined"
@@ -214,10 +210,7 @@ export default function LandingPage(props) {
                         </Button>
                     </Grid>
                     <Grid item className={classes.icon}>
-                        <img
-                            alt="custom software"
-                            src="/assets/customSoftwareIcon.svg"
-                        />
+                        <img alt="custom software" src="/assets/customSoftwareIcon.svg" />
                     </Grid>
                 </Grid>
             </Grid>
@@ -225,13 +218,13 @@ export default function LandingPage(props) {
                 {/*------Mobile App Block--------*/}
                 <Grid
                     container
-                    justify={matchesSM ? 'center' : 'flex-end'}
+                    justify={matchesSM ? "center" : "flex-end"}
                     className={classes.serviceContainer}
                 >
                     <Grid
                         item
                         style={{
-                            textAlign: matchesSM ? 'center' : undefined,
+                            textAlign: matchesSM ? "center" : undefined,
                         }}
                     >
                         <Typography
@@ -242,13 +235,11 @@ export default function LandingPage(props) {
                             Android/iOS App Development
                         </Typography>
                         <Typography variant="subtitle2" gutterBottom>
-                            Extend functionality. Extend Access. Increase
-                            Engagement.
+                            Extend functionality. Extend Access. Increase Engagement.
                         </Typography>
                         <Typography variant="subtitle1" gutterBottom>
-                            Integrate your web experience or create standalone
-                            app{matchesSM ? null : <br />} with either mobile
-                            platform
+                            Integrate your web experience or create standalone app
+                            {matchesSM ? null : <br />} with either mobile platform
                         </Typography>
                         <Button
                             variant="outlined"
@@ -268,13 +259,9 @@ export default function LandingPage(props) {
                     <Grid
                         item
                         className={classes.icon}
-                        style={{ marginRight: matchesSM ? 0 : '5em' }}
+                        style={{ marginRight: matchesSM ? 0 : "5em" }}
                     >
-                        <img
-                            alt="mobile app"
-                            src="/assets/mobileIcon.svg"
-                            width="220"
-                        />
+                        <img alt="mobile app" src="/assets/mobileIcon.svg" width="220" />
                     </Grid>
                 </Grid>
             </Grid>
@@ -282,14 +269,14 @@ export default function LandingPage(props) {
                 {/*------Website Block--------*/}
                 <Grid
                     container
-                    justify={matchesSM ? 'center' : undefined}
+                    justify={matchesSM ? "center" : undefined}
                     className={classes.serviceContainer}
                 >
                     <Grid
                         item
                         style={{
-                            marginLeft: matchesSM ? 0 : '5em',
-                            textAlign: matchesSM ? 'center' : undefined,
+                            marginLeft: matchesSM ? 0 : "5em",
+                            textAlign: matchesSM ? "center" : undefined,
                         }}
                     >
                         <Typography
@@ -330,14 +317,14 @@ export default function LandingPage(props) {
                     container
                     justify="center"
                     alignItems="center"
-                    style={{ height: '60em', marginTop: '12em' }}
+                    style={{ height: "60em", marginTop: "12em" }}
                 >
                     <Card className={classes.revolutionCard}>
                         <CardContent>
                             <Grid
                                 container
                                 direction="column"
-                                style={{ textAlign: 'center' }}
+                                style={{ textAlign: "center" }}
                             >
                                 <Grid item>
                                     <Typography
@@ -349,13 +336,9 @@ export default function LandingPage(props) {
                                     </Typography>
                                 </Grid>
                                 <Grid item>
-                                    <Typography
-                                        variant="subtitle1"
-                                        gutterBottom
-                                    >
-                                        Visionary insights coupled with
-                                        revolutionary technology is a recipe for
-                                        revolution
+                                    <Typography variant="subtitle1" gutterBottom>
+                                        Visionary insights coupled with revolutionary
+                                        technology is a recipe for revolution
                                     </Typography>
                                     <Button
                                         variant="outlined"
@@ -380,7 +363,7 @@ export default function LandingPage(props) {
                 {/* -----Information Block */}
                 <Grid
                     container
-                    style={{ height: '50em' }}
+                    style={{ height: "50em" }}
                     alignItems="center"
                     className={classes.infoBackground}
                 >
@@ -388,21 +371,17 @@ export default function LandingPage(props) {
                         item
                         container
                         style={{
-                            textAlign: matchesXS ? 'center' : 'inherit',
-                            color: 'white',
+                            textAlign: matchesXS ? "center" : "inherit",
+                            color: "white",
                         }}
-                        direction={matchesSM ? 'column' : 'row'}
+                        direction={matchesSM ? "column" : "row"}
                     >
                         <Grid
                             item
                             sm
                             style={{
-                                marginLeft: matchesXS
-                                    ? '0'
-                                    : matchesSM
-                                    ? '2em'
-                                    : '5em',
-                                marginBottom: matchesXS ? '10em' : 0,
+                                marginLeft: matchesXS ? "0" : matchesSM ? "2em" : "5em",
+                                marginBottom: matchesXS ? "10em" : 0,
                             }}
                         >
                             <Grid container direction="column">
@@ -429,18 +408,14 @@ export default function LandingPage(props) {
                             item
                             sm
                             style={{
-                                marginRight: matchesXS
-                                    ? '0'
-                                    : matchesSM
-                                    ? '2em'
-                                    : '5em',
-                                textAlign: matchesXS ? 'center' : 'right',
+                                marginRight: matchesXS ? "0" : matchesSM ? "2em" : "5em",
+                                textAlign: matchesXS ? "center" : "right",
                             }}
                         >
                             <Grid container direction="column">
                                 <Typography variant="h4">Contact us</Typography>
                                 <Typography variant="subtitle2" gutterBottom>
-                                    Say Hello{' '}
+                                    Say Hello{" "}
                                     <span role="img" aria-label="waving hand">
                                         👋
                                     </span>
